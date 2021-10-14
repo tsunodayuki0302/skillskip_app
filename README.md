@@ -1,24 +1,75 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| identification     | string | null: false               |
+| nickname           | string | null: false               |
+| email              | string | unique: true, null: false |
+| encrypted_password | string | null: false               |
+| achievement        | string |                           |
+| profile            | string | null: false               |
 
-* Ruby version
 
-* System dependencies
+### Association
 
-* Configuration
+- has_many :recruitment
+- has_many :comment
+- has_many :record
 
-* Database creation
+## recruitment テーブル
 
-* Database initialization
+| Column                 | Type       | Options                        |
+| ---------------------- | ---------- | ------------------------------ |
+| title                  | string     | null: false                    |
+| content                | text       | null: false                    |
+| category_id            | integer    | null: false                    |
+| price                  | integer    | null: false                    |
 
-* How to run the test suite
+### Association
 
-* Services (job queues, cache servers, search engines, etc.)
+- belongs_to :recruitment
+- has_many :comment
+- has_many :record
 
-* Deployment instructions
+## record テーブル
 
-* ...
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| user          | references | null: false, foreign_key: true |
+| recruitment   | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :recruitment
+- has_one :order
+
+
+## order テーブル
+
+| Column              | Type       | Options                        |
+| ------------------- | ---------- | ------------------------------ |
+| day                 | string     | null: false                    |
+| record              | references | null: false, foreign_key: true |
+
+
+### Association
+
+- belongs_to :record
+
+
+## comment テーブル
+
+| Column              | Type       | Options                        |
+| ------------------- | ---------- | ------------------------------ |
+| letter              | string     | null: false                    |
+| user                | references | null: false, foreign_key: true |
+| recruitment         | references | null: false, foreign_key: true |
+
+
+### Association
+
+- belongs_to :user
+- belongs_to :recruitment
