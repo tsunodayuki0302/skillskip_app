@@ -4,7 +4,7 @@
 
 | Column             | Type   | Options                   |
 | ------------------ | ------ | ------------------------- |
-| identification     | string | null: false               |
+| identification     | string | unique: true, null: false |
 | nickname           | string | null: false               |
 | email              | string | unique: true, null: false |
 | encrypted_password | string | null: false               |
@@ -14,22 +14,22 @@
 
 ### Association
 
-- has_many :recruitment
-- has_many :comment
-- has_many :record
+- has_many :recruitments
+- has_many :comments
+- has_many :records
 
 ## recruitment テーブル
 
 | Column                 | Type       | Options                        |
 | ---------------------- | ---------- | ------------------------------ |
-| title                  | string     | null: false                    |
+| heading                | string     | null: false                    |
 | content                | text       | null: false                    |
 | category_id            | integer    | null: false                    |
-| price                  | integer    | null: false                    |
+| price                  | string     | null: false                    |
 
 ### Association
 
-- belongs_to :recruitment
+- belongs_to :user
 - has_many :comment
 - has_many :record
 
