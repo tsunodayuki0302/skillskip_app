@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2021_10_15_051901) do
     t.string "heading", null: false
     t.string "content", null: false
     t.integer "category_id", null: false
-    t.string "title", null: false
+    t.string "price", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
