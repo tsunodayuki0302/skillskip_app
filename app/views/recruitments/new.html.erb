@@ -12,12 +12,22 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :image, id:"item-image" %>
+        <%= f.file_field :image, id:"recruitment-image", autofocus: true %>
       </div>
     </div>
 
     <%# カテゴリー %>
-    <%#= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+    <div class="recruitment-detail">
+      <div class="weight-bold-text">商品の詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"recruitment-category"}) %>
+        </div>
+      </div>
+    </div>
 
     <%# タイトルと説明 %>
     <div class="new-title">
@@ -25,7 +35,7 @@
         タイトル
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :heading, class:"items-text", id:"recruitment-heading", placeholder:"title（必須 40文字まで) 例）「初心者向け」最高ランクまでいける思考法！", rows: "3", maxlength:"40" %>
+      <%= f.text_area :heading, class:"items-text", id:"recruitment-heading", placeholder:"title（必須 40文字まで) 例）「初心者向け」最高ランクまでいける思考法！", rows: "3", maxlength:"40", autofocus: true %>
       <div class="items-explain">
         <div class="weight-bold-text">
           提供内容
@@ -44,7 +54,7 @@
   週に１回、一ヶ月ご指導させていただきます。1日2時間。土日どちらかでお願いいたします。
 ・注意点
   日本語を主言語としている方。
-  学ぶ意欲のある方。" ,rows:"20" ,maxlength:"1000" %>
+  学ぶ意欲のある方。" ,rows:"20" ,maxlength:"1000", autofocus: true %>
       </div>
     </div>
     <%# 値段設定 %>
@@ -55,7 +65,7 @@
         <span class="indispensable">必須</span>
       </div>
         <span class="sell-yen">¥</span>
-        <%= f.text_field :price, class:"price-input", id:"recruitment-price", placeholder:"例）5000" %>
+        <%= f.text_field :price, class:"price-input", id:"recruitment-price", placeholder:"例）5000", autofocus: true %>
       </div>
     <div class="sell-btn-contents">
       <%= f.submit "募集する", class:"sell-btn" %>

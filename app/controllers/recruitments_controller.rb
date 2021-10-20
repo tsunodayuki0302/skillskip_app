@@ -1,6 +1,7 @@
 class RecruitmentsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
   def index
-    @recruitment = Recruitment.all
+    @recruitments = Recruitment.order("created_at DESC")
   end
 
   def new
@@ -8,9 +9,9 @@ class RecruitmentsController < ApplicationController
   end
 
   def create
-    @recruitment = Recruitment.new
+    @recruitment = Recruitment.new(recruitment_params)
     if @recruitment.save
-      redirect_to root_path(@recruitment)
+      redirect_to root_path
     else
       render :new
     end
@@ -18,6 +19,6 @@ class RecruitmentsController < ApplicationController
 
   private
   def recruitment_params
-    params.require(:recruitment).permit(:heading, :content, :category_id, :price, :image).merge(user_id: current_user.id)
+    params.permit(:heading, :content, :category_id, :price, :image).merge(user_id: current_user.id)
   end
 end
