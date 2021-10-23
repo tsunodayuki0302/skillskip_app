@@ -17,14 +17,13 @@
     </div>
 
     <%# カテゴリー %>
-    <div class="recruitment-detail">
-      <div class="weight-bold-text">商品の詳細</div>
-      <div class="form">
-        <div class="weight-bold-text">
-          カテゴリー
+    <div class="append__category">
+      <span class="category">カテゴリー</span>
+        <div class="fform_label">
+          <div class="lavel_name ">
           <span class="indispensable">必須</span>
         </div>
-        <%#= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"recruitment-category"}) %>
+        <%= f.collection_select(:category_id, @category_parent_array, :id, :name, {}, { include_blank: "選択してください", class:"select-box", id:"recruitment-category"}) %>
         </div>
       </div>
     </div>
