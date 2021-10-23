@@ -65,3 +65,4 @@ gem 'ancestry'
 
 gem 'bootstrap-sass'
 gem 'jquery-rails'
+gem 'haml-rails'

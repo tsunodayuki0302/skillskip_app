@@ -1,0 +1,56 @@
+.recruitment-sell-contents
+  %h3.recruitments-sell-title 新規生徒募集
+  .recruitment-sell-main
+    = form_with url: recruitments_path, local: true do |f|
+      .img-upload
+        .weight-bold-text
+          画像
+          %span.indispensable 必須
+        .click-upload
+          %p
+            クリックしてファイルをアップロード
+          = f.file_field :image, id:"recruitment-image", autofocus: true
+      .recruitment-detail
+        .weight-bold-text 商品の詳細
+        .form
+          .weight-bold-text
+    .append__category
+      .category
+        .form__label
+          .lavel__name 
+            カテゴリー
+            .lavel__Required
+              [必須]
+          =f.collection_select :category_id, @category_parent_array, :id, :name,{ include_blank: "選択してください"},class:"serect_field"
+  .new-title
+    .weight-bold-text
+      タイトル
+      %span.indispensable 必須
+    = f.text_area :heading, class:"items-text", id:"recruitment-heading", placeholder:"title（必須 40文字まで) 例）「初心者向け」最高ランクまでいける思考法！", rows: "3", maxlength:"40", autofocus: true
+    .items-explain
+      .weight-bold-text
+        提供内容
+        %span.indispensable 必須
+      = f.text_area :content, class:"items-text", id:"redruitment-content", placeholder:"提供内容の説明（必須 1,000文字まで）（自己紹介、コーチングの内容、期間、注意点など） |
+        例）                                                                                                                             |
+        ・自己紹介                                                                                                                          |
+        詳細を見ていただき誠にありがとうございます。                                                                                                         |
+        FPS歴５年、大会実績あり。                                                                                                                 |
+        お客様が満足できる指導をさせていただきます。                                                                                                         |
+        ・学べる内容                                                                                                                         |
+        感度設定。1対1の基本的な動き。                                                                                                               |
+        クリアリング                                                                                                                         |
+        ・期間                                                                                                                            |
+        週に１回、一ヶ月ご指導させていただきます。1日2時間。土日どちらかでお願いいたします。                                                                                    |
+        ・注意点                                                                                                                           |
+        日本語を主言語としている方。                                                                                                                 |
+        学ぶ意欲のある方。" ,rows:"20" ,maxlength:"1000", autofocus: true                                                                       |
+  .price-content
+    .price-text
+      %span 価格
+      %span.indispensable 必須
+    %span.sell-yen ¥
+    = f.text_field :price, class:"price-input", id:"recruitment-price", placeholder:"例）5000", autofocus: true
+  .sell-btn-contents
+    = f.submit "募集する", class:"sell-btn"
+    = link_to 'もどる', root_path, class:"back-btn"

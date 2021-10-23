@@ -1,0 +1,39 @@
+.main
+  = render "shared/header"
+  .title-top
+  = image_tag "skill01.jpg"
+  %p.title-service 教える？教わる？
+  %p.title-service コーチと生徒を結ぶ
+  %p.title-service
+    ゲーマー育成アプリ&gt;
+.wrapper
+  .side-ber
+    %h4.category-all カテゴリー一覧
+    .header-category
+      アクション・FPS・TPS
+      格闘・スポーツ・レース
+      パズル・カード・サバイバル
+      MOBA・シューティング
+      クリエイター(小説・イラスト・動画)
+      コーチ育成
+      その他
+.item-contents
+  %h2.title 新規募集一覧
+  %ul.item-lists
+    - @recruitments.each do |recruitment|
+      %li.list
+        .recruitment-img-content
+          = link_to recruitment_path(recruitment.id) do
+            = image_tag recruitment.image, class: "recruitment-img"
+        .recruitment-info
+          %h3.recruitment-name
+            = recruitment.heading
+          .recruitment-price
+            %span
+              = recruitment.price
+              円
+    - if @recruitments[0] == nil
+      %li.list
+        生徒を募集しよう！
+    %ul
+= link_to '新規募集', new_recruitment_path, class: 'purchase-btn'

@@ -1,24 +1,66 @@
-* {
-  box-sizing: border-box;
-}
 
 .top-page-header {
+  background-color: #192437;
   width: 100vw;
-  padding: 2vh 15vw;
+  height: 20vh;
+  // padding: 2vh 15vw;
+  display: flex;
+  position: relative;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.lists-left {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.lists-middle {
+  position: relative;
+  display: flex;
+}
+
+.lists-right {
+  padding: 10px;
   display: flex;
   flex-direction: column;
 }
 
-.nav {
-  font-size: 18px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 1vh 0;
+.user-nickname {
+  color: #FAFAFA;
+  position: absolute;
+  top: 170px;
+  left: 40px;
 }
 
-.lists-left {
-  min-width: 700px;
-  
+.logout {
+  color: #FAFAFA;
+  position: absolute;
+  top: 3vh;
+  left: 3vw;
+}
+
+.app-img {
+  height: 17vh;
+}
+
+.top-app {
+  color: #FAFAFA;
+  font-size: 12vmin;
+}
+
+.path {
+color: #FAFAFA;
+font-size: 5vmin;
+
+}
+
+.light-name {
+  font-size: 5vmin;
+  color: #FAFAFA;
 }
