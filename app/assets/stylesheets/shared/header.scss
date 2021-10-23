@@ -1,9 +1,7 @@
-
 .top-page-header {
   background-color: #192437;
   width: 100vw;
   height: 20vh;
-  // padding: 2vh 15vw;
   display: flex;
   position: relative;
 }
@@ -31,12 +29,6 @@
   flex-direction: column;
 }
 
-.user-nickname {
-  color: #FAFAFA;
-  position: absolute;
-  top: 170px;
-  left: 40px;
-}
 
 .logout {
   color: #FAFAFA;

@@ -1,16 +1,29 @@
 <header class='top-page-header'>
-  <div class='nav'>
-    <ul class='lists-left'>
-      <%#= image_tag current_user.image, "#", class: "user-image" %>
-      <li><%= link_to current_user.nickname, '#', class: "user-nickname" %></li>
-    <ul class='lists-right'>
+  <div class='list'>
+    <div class='lists-left'>
     <% if user_signed_in? %>
-    <li><%= link_to 'コミュニティ', '#', class: "path" %></li>
-    <li><%= link_to 'DM', '#', class: "path"  %></li>
-    <% else %>
-      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+    <%= link_to 'コミュニティ', '#', class: "path" %>
+    <%= link_to 'DM', '#', class: "path"  %>
     <% end %>
-    </ul>
+    </div>
+    <div class='lists-middle'>
+      <div class='top-app'>
+      Skill
+      </div>
+      <%= image_tag 'Slogo.png', class: 'app-img' %>
+      <div class='top-app'>
+      kip
+      </div>
+    </div>
+    <div class='lists-right'>
+    <% if user_signed_in? %>
+    <%#= image_tag current_user.image, "#", class: "user-image" %>
+    <%= link_to current_user.nickname, '#', class: "light-name" %>
+    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "light-name" %>
+    <% else %>
+      <%= link_to 'ログイン', new_user_session_path, class: "light-name" %>
+      <%= link_to '新規登録', new_user_registration_path, class: "light-name" %>
+    <% end %>
+    </div>
   </div>
 </header>
