@@ -1,0 +1,64 @@
+<div class='main'>
+  <%= render "shared/header" %>
+ <%# 画面上部の「ゲーマー育成アプリ」帯部分 %>
+  <div class ='title-top'></div>
+    <%= image_tag "skill01.jpg" %>
+    <p class='title-service'>教える？教わる？</p>
+    <p class='title-service'>コーチと生徒を結ぶ</p>
+    <p class='title-service'>ゲーマー育成アプリ</>
+  </div>
+  <%# /画面上部の「ゲーマー育成アプリ」帯部分  %>
+
+<%# サイドバー %>
+  <div class='wrapper'>
+    <div class='side-ber'>
+      <h4 class="category-all">カテゴリー一覧</h4>
+      <div class="header-category">
+        アクション・FPS・TPS
+        格闘・スポーツ・レース
+        パズル・カード・サバイバル
+        MOBA・シューティング
+        クリエイター(小説・イラスト・動画)
+        コーチ育成
+        その他
+      </div>
+    </div>
+      <%#= render "shared/side-bar" %>
+  </div>
+
+<%# 投稿一覧 %>
+  <div class='item-contents'>
+  <h2 class='title'>新規募集一覧</h2>
+  <ul class='item-lists'>
+    <% @recruitments.each do |recruitment| %>
+    <li class='list'>
+      <div class='recruitment-img-content'>
+      <%= link_to recruitment_path(recruitment.id) do %>
+        <%= image_tag recruitment.image, class: "recruitment-img" %>
+        <%# if recruitment.record != nil  %>
+        <%#<div class='sold-out'>
+          <span>受付終了!!</span>
+        </div>
+        <% end %> 
+      </div>
+      <div class='recruitment-info'>
+        <h3 class='recruitment-name'>
+          <%= recruitment.heading %>
+        </h3>
+        <div class='recruitment-price'>
+          <span><%= recruitment.price %>円</span>
+        </div>
+      <% end %>
+      </div>
+    </li>
+    <% end %>
+    <% if @recruitments[0] == nil %>
+    <li class='list'>
+    生徒を募集しよう！
+    <% end %>
+  <ul>
+  </div>
+<%# /投稿一覧 %>
+
+<%= link_to '新規募集', new_recruitment_path, class: 'purchase-btn' %>
+</div>
