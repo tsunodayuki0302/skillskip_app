@@ -1,32 +1,19 @@
+<%= render "shared/header" %>
+
 <div class='main'>
-  <%= render "shared/header" %>
  <%# 画面上部の「ゲーマー育成アプリ」帯部分 %>
-  <div class ='title-top'></div>
+  <%=  %>
+  <div class ='title-top'>
     <%= image_tag "skill01.jpg" %>
-    <p class='title-service'>教える？教わる？</p>
-    <p class='title-service'>コーチと生徒を結ぶ</p>
-    <p class='title-service'>ゲーマー育成アプリ</>
+    <p class='title-service1'>教える？教わる？</p>
+    <p class='title-service2'>コーチと生徒を結ぶ</p>
+    <p class='title-service3'>ゲーマー育成アプリ</p>
+    <%= link_to 'ログイン', new_user_session_path, class: "sign" %>
+    <%= link_to '新規登録', new_user_registration_path, class: "sign-in" %>
   </div>
   <%# /画面上部の「ゲーマー育成アプリ」帯部分  %>
 
-<%# サイドバー %>
-  <div class='wrapper'>
-    <div class='side-ber'>
-      <h4 class="category-all">カテゴリー一覧</h4>
-      <div class="header-category">
-        アクション・FPS・TPS
-        格闘・スポーツ・レース
-        パズル・カード・サバイバル
-        MOBA・シューティング
-        クリエイター(小説・イラスト・動画)
-        コーチ育成
-        その他
-      </div>
-    </div>
-      <%#= render "shared/side-bar" %>
-  </div>
-
-<%# 投稿一覧 %>
+  <%# 投稿一覧 %>
   <div class='item-contents'>
   <h2 class='title'>新規募集一覧</h2>
   <ul class='item-lists'>

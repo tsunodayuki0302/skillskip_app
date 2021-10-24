@@ -1,15 +1,49 @@
-.wrapper {
-  display: flex;
+.main {
+  background-color: black;
+  color: #fff;
 }
 
-.side-bar {
-  background-color: #253141;
-  width: 30%;
-  height: 100vh;
+.title-top img {
+  position: relative;
+  background-position:center center;
+  background-size:contain;
+  width:100%;
 }
 
-.category-all {
+.title-service1 {
+  position: absolute;
+  left: 40px;
+  top: 30%;
+  font-size: 6vmin;
   
 }
 
+.title-service2 {
+  position: absolute;
+  left: 40px;
+  top: 45%;
+  font-size: 6vmin;
+}
 
+.title-service3 {
+  position: absolute;
+  left: 40px;
+  top: 60%;
+  font-size: 6vmin;
+}
+
+.sign {
+  position: absolute;
+  top: 80%;
+  left: 60%;
+  font-size: 5vmin;
+  color: #FAFAFA;
+}
+
+.sign-in {
+  position: absolute;
+  top: 80%;
+  left: 75%;
+  font-size: 5vmin;
+  color: #FAFAFA;
+}

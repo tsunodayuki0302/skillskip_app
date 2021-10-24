@@ -23,7 +23,8 @@
           <div class="lavel_name ">
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:category_id, @category_parent_array, :id, :name, {}, { include_blank: "選択してください", class:"select-box", id:"recruitment-category"}) %>
+        <%= f.collection_select(:category_id, @category_parent_array, :id, :name, {include_blank: "選択してください"}, { class:"select-box", id:"recruitment-category"}) %>
+
         </div>
       </div>
     </div>

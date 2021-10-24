@@ -54,7 +54,7 @@ $(function(){
     var childId = document.getElementById('child__category').value;
     if(childId != "" && childId != 4 && childId != 5 && childId != 6 && childId != 7){
       $.ajax({
-        url: '/items/get_category_grandchildren',
+        url: '/recruitments/get_category_grandchildren',
         type: 'GET',
         data: { child_id: childId },
         dataType: 'json'

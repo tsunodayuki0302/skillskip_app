@@ -30,4 +30,5 @@ class RecruitmentsController < ApplicationController
   def recruitment_params
     params.permit(:heading, :content, :category_id, :price, :image).merge(user_id: current_user.id)
   end
+
 end
