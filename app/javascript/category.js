@@ -1,4 +1,5 @@
-$(function(){
+
+window.addEventListener('DOMContentLoaded', function(){
   function appendOption(category){
     var html = `<option value="${category.id}">${category.name}</option>`;
     return html;
@@ -27,8 +28,9 @@ $(function(){
   $('#recruitment_category_id').on('change',function(){
     var parentId = document.getElementById('recruitment_category_id').value;
     if (parentId != ""){
+      console.log(parentId)
       $.ajax({
-        url: '/recruitments/get_category_children/',
+        url: 'get_category_children',
         type: 'GET',
         data: { parent_id: parentId },
         dataType: 'json'
