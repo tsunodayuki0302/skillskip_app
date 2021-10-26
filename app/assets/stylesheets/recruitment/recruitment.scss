@@ -1,11 +1,11 @@
 .main {
-  background-color: black;
-  color: #fff;
+  background-color: #000d58;
+  color: #ffffff;
 }
 
 .title-top img {
   position: relative;
-  background-position:center center;
+  background-position:top center;
   background-size:contain;
   width:100%;
 }
@@ -15,7 +15,6 @@
   left: 40px;
   top: 30%;
   font-size: 6vmin;
-  
 }
 
 .title-service2 {
@@ -34,16 +33,16 @@
 
 .sign {
   position: absolute;
-  top: 80%;
-  left: 60%;
+  top: 85%;
+  right: 250px;
   font-size: 5vmin;
-  color: #FAFAFA;
+  color: #ffffff;
 }
 
 .sign-in {
   position: absolute;
-  top: 80%;
-  left: 75%;
+  top: 85%;
+  right: 80px;
   font-size: 5vmin;
-  color: #FAFAFA;
+  color: #ffffff;
 }
