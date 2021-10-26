@@ -1,4 +1,3 @@
-
 window.addEventListener('DOMContentLoaded', function(){
   function appendOption(category){
     var html = `<option value="${category.id}">${category.name}</option>`;
@@ -25,8 +24,8 @@ window.addEventListener('DOMContentLoaded', function(){
     $('.append__category').append(grandchildSelectHtml);
   }
 
-  $('#recruitment_category_id').on('change',function(){
-    var parentId = document.getElementById('recruitment_category_id').value;
+  $('#recruitment_category').on('change',function(){
+    var parentId = document.getElementById('recruitment_category').value;
     if (parentId != ""){
       console.log(parentId)
       $.ajax({
@@ -52,9 +51,10 @@ window.addEventListener('DOMContentLoaded', function(){
       $('#grandchildren_wrapper').remove();
     }
   });
+
   $('.append__category').on('change','#child__category',function(){
     var childId = document.getElementById('child__category').value;
-    if(childId != "" && childId != 4 && childId != 5 && childId != 6 && childId != 7){
+    if(childId != "" && childId != 4 && childId != 5 && childId != 6 && childId != 7 && childId != 8 && childId != 50 && childId != 51){
       $.ajax({
         url: '/recruitments/get_category_grandchildren',
         type: 'GET',

@@ -1,10 +1,11 @@
 game = Category.create(name: 'ゲーム')
- action, kakutou, puzzle, moba = game.children.create(
+ action, kakutou, puzzle, moba, hoka = game.children.create(
   [
     { name: 'アクション・FPS・TPS' },
     { name: '格闘・スポーツ・レース' },
     { name: 'パズル・カード・サバイバル' },
-    { name: 'MOBA・シューティング' }
+    { name: 'MOBA・シューティング' },
+    { name: 'その他' }
   ]
 )
 
@@ -24,19 +25,24 @@ end
   moba.children.create(name: name)
 end
 
+['コーチ育成', '大会運営', '実況解説', 'その他'].each do |name|
+  hoka.children.create(name: name)
+end
+
+
+
 creator = Category.create(name: 'クリエイター')
-ｍovie, illustration = creator.children.create(
+movie, illustration = creator.children.create(
   [
-    { name: '動画作成・編集' },
-    { name: 'イラスト作成・編集' },
+    { name: '動画' },
+    { name: 'イラスト' },
   ]
 )
 
-other = Category.create(name: 'その他')
-ｍovie, illustration = other.children.create(
-  [
-    { name: 'コーチ育成' },
-    { name: '実況解説・大会運営' },
-    { name: 'その他' },
-  ]
-)
+['制作', '編集'].each do |name|
+  movie.children.create(name: name)
+end
+
+['制作', '編集'].each do |name|
+  illustration.children.create(name: name)
+end
