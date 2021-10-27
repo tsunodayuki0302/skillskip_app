@@ -8,26 +8,28 @@
     <p class='title-service1'>教える？教わる？</p>
     <p class='title-service2'>コーチと生徒を結ぶ</p>
     <p class='title-service3'>ゲーマー育成アプリ</p>
+    <% if user_signed_in? %>
     <%= link_to 'ログイン', new_user_session_path, class: "sign" %>
     <%= link_to '新規登録', new_user_registration_path, class: "sign-in" %>
+    <% end %>
   </div>
   <%# /画面上部の「ゲーマー育成アプリ」帯部分  %>
 
   <%# 投稿一覧 %>
-  <div class='item-contents'>
-  <h2 class='title'>新規募集一覧</h2>
-  <ul class='item-lists'>
-    <% @recruitments.each do |recruitment| %>
-    <li class='list'>
-      <div class='recruitment-img-content'>
-      <%= link_to recruitment_path(recruitment.id) do %>
-        <%= image_tag recruitment.image, class: "recruitment-img" %>
-        <%# if recruitment.record != nil  %>
-        <%#<div class='sold-out'>
-          <span>受付終了!!</span>
+  <div class='rwcruitment-contents'>
+    <h2 class='title'>新規募集一覧</h2>
+    <ul class='item-lists'>
+      <% @recruitments.each do |recruitment| %>
+      <li class='list'>
+        <div class='recruitment-img-content'>
+        <%= link_to recruitment_path(recruitment.id) do %>
+          <%= image_tag recruitment.image, class: "recruitment-img" %>
+          <%# if recruitment.record != nil  %>
+          <%#<div class='sold-out'>
+            <span>受付終了!!</span>
+          </div>
+          <% end %> 
         </div>
-        <% end %> 
-      </div>
       <div class='recruitment-info'>
         <h3 class='recruitment-name'>
           <%= recruitment.heading %>

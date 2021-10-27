@@ -1,12 +1,14 @@
 class RecruitmentsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :destroy]
+  before_action :set_array, only: [:new, :create, :show, :edit]
+  before_action :set_recruitment, only: [ :edit, :update, :show, :destroy]
+
   def index
     @recruitments = Recruitment.order("created_at DESC")
   end
 
   def new
     @recruitment = Recruitment.new
-    @category_parent_array = Category.where(ancestry: nil)
   end
 
   def create
@@ -16,6 +18,9 @@ class RecruitmentsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
   end
 
   def get_category_children
@@ -29,6 +34,14 @@ class RecruitmentsController < ApplicationController
   private
   def recruitment_params
     params.permit(:heading, :content, :category_id, :price, :image).merge(user_id: current_user.id)
+  end
+
+  def set_array
+    @category_parent_array = Category.where(ancestry: nil)
+  end
+
+  def set_recruitment
+    @recruitment = Recruitment.find(params[:id])
   end
 
 end

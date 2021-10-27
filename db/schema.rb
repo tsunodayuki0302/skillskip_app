@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 2021_10_21_030349) do
   end
 
   create_table "recruitments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "heading", null: false
-    t.string "content", null: false
+    t.text "heading", null: false
+    t.text "content", null: false
     t.integer "category_id", null: false
     t.integer "price", null: false
     t.bigint "user_id", null: false

@@ -23,7 +23,7 @@
           <div class="lavel_name ">
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:category_id, @category_parent_array, :id, :name, {include_blank: "選択してください"}, class:"select-box", id: "recruitment_category") %>
+        <%= f.collection_select(:category_id, @category_parent_array, :id, :name, {include_blank: "選択してください"}, class:"select-box", id: "recruitment_category_id") %>
         </div>
       </div>
     </div>
@@ -34,13 +34,13 @@
         タイトル
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :heading, class:"items-text", id:"recruitment-heading", placeholder:"title（必須 40文字まで) 例）「初心者向け」最高ランクまでいける思考法！", rows: "3", maxlength:"40", autofocus: true %>
+      <%= f.text_area :heading, class:"recruitment-text", id:"recruitment-heading", placeholder:"title（必須 40文字まで) 例）「初心者向け」最高ランクまでいける思考法！", rows: "3", maxlength:"40", autofocus: true %>
       <div class="items-explain">
         <div class="weight-bold-text">
           提供内容
           <span class="indispensable">必須</span>
         </div>
-      <%= f.text_area :content, class:"items-text", id:"redruitment-content", placeholder:"提供内容の説明（必須 1,000文字まで）（自己紹介、コーチングの内容、期間、注意点など）
+      <%= f.text_area :content, class:"recruitment-text", id:"redruitment-content", placeholder:"提供内容の説明（必須 1,000文字まで）（自己紹介、コーチングの内容、期間、注意点など）
 例）
 ・自己紹介
   詳細を見ていただき誠にありがとうございます。
@@ -73,3 +73,6 @@
     <% end %>
   </div>
 </div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
