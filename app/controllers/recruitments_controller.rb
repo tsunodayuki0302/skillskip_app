@@ -43,5 +43,5 @@ class RecruitmentsController < ApplicationController
   def set_recruitment
     @recruitment = Recruitment.find(params[:id])
   end
-
+  
 end

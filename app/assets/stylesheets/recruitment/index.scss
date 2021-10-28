@@ -12,9 +12,10 @@
 
 .title-service1 {
   position: absolute;
+  color: #fff200;
   left: 40px;
   top: 30%;
-  font-size: 6vmin;
+  font-size: 8vmin;
 }
 
 .title-service2 {
@@ -28,7 +29,7 @@
   position: absolute;
   left: 40px;
   top: 60%;
-  font-size: 6vmin;
+  font-size: 8vmin;
 }
 
 .sign {
@@ -55,6 +56,59 @@
   align-items: center;
   padding: 10vh 0;
 }
+
+.recruitment-contents>.title {
+  font-size: 10vh;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.recruitment-lists {
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+}
+
+.recruitment-list {
+  display: flex;
+  justify-content: space-between;
+  width: 50vh;
+  padding: 1vw;
+}
+
+.recruitment-img-content {
+  position: relative;
+}
+
+.recruitment-img {
+  width: 50vh;
+  height: 50vh;
+}
+
+.recruitment-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.recruitment-name {
+  font-size: 7vh;
+  color: #000d58;
+}
+
+.recruitment-price {
+  color: #ff0000;
+  font-size: 8vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-content {
+  color: #ffffff;
+  font-size: 100px;
+}
+
+/* 投稿アイコン */
 
 .purchase-btn {
   width: 120px;
