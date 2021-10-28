@@ -9,6 +9,7 @@
     <p class='title-service2'>コーチと生徒を結ぶ</p>
     <p class='title-service3'>ゲーマー育成アプリ</p>
     <% if user_signed_in? %>
+    <% else %>
     <%= link_to 'ログイン', new_user_session_path, class: "sign" %>
     <%= link_to '新規登録', new_user_registration_path, class: "sign-in" %>
     <% end %>
@@ -49,5 +50,8 @@
   </div>
 <%# /投稿一覧 %>
 
-<%= link_to '新規募集', new_recruitment_path, class: 'purchase-btn' %>
+<%= link_to(new_recruitment_path, class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>新規募集</span>
+  <%= image_tag 'icon-new.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<% end %>
 </div>

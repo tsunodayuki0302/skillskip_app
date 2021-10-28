@@ -18,11 +18,12 @@
 
     <%# カテゴリー %>
     <div class="append__category">
-      <span class="category">カテゴリー</span>
-        <div class="fform_label">
-          <div class="lavel_name ">
-          <span class="indispensable">必須</span>
-        </div>
+      <div class="weight-bold-text">
+      カテゴリー
+       <span class="indispensable">必須</span>
+      </div>
+      <div class="fform_label">
+        <div class="lavel_name ">
         <%= f.collection_select(:category_id, @category_parent_array, :id, :name, {include_blank: "選択してください"}, class:"select-box", id: "recruitment_category_id") %>
         </div>
       </div>
@@ -35,7 +36,7 @@
         <span class="indispensable">必須</span>
       </div>
       <%= f.text_area :heading, class:"recruitment-text", id:"recruitment-heading", placeholder:"title（必須 40文字まで) 例）「初心者向け」最高ランクまでいける思考法！", rows: "3", maxlength:"40", autofocus: true %>
-      <div class="items-explain">
+      <div class="recruitment-explain">
         <div class="weight-bold-text">
           提供内容
           <span class="indispensable">必須</span>
@@ -60,7 +61,7 @@
 
     <div class="price-content">
       <div class="price-text">
-        <span>価格</span>
+        価格
         <span class="indispensable">必須</span>
       </div>
         <span class="sell-yen">¥</span>

@@ -13,8 +13,9 @@ class RecruitmentsController < ApplicationController
 
   def create
     @recruitment = Recruitment.new(recruitment_params)
+    binding.pry
     if @recruitment.save
-      redirect_to root_path
+      redirect_to root_path(@recruitment)
     else
       render :new
     end
@@ -33,9 +34,8 @@ class RecruitmentsController < ApplicationController
 
   private
   def recruitment_params
-    params.permit(:heading, :content, :category_id, :price, :image).merge(user_id: current_user.id)
+    params.require(:recruitment).permit(:heading, :content, :category_id, :price, :image).merge(user_id: current_user.id)
   end
-
   def set_array
     @category_parent_array = Category.where(ancestry: nil)
   end
