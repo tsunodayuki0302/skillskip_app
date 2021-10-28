@@ -12,6 +12,7 @@
 
 .title-service1 {
   position: absolute;
+  text-shadow: 5px 4px 3px #111010;
   color: #fff200;
   left: 40px;
   top: 30%;
@@ -20,6 +21,7 @@
 
 .title-service2 {
   position: absolute;
+  text-shadow: 5px 4px 3px #111010;
   left: 40px;
   top: 45%;
   font-size: 6vmin;
@@ -27,6 +29,7 @@
 
 .title-service3 {
   position: absolute;
+  text-shadow: 5px 4px 3px #111010;
   left: 40px;
   top: 60%;
   font-size: 8vmin;
@@ -34,18 +37,36 @@
 
 .sign {
   position: absolute;
-  top: 85%;
-  right: 250px;
+  top: 75%;
+  right: 300px;
   font-size: 5vmin;
-  color: #ffffff;
+  color: #111010;
+  width: 120px;
+  background: #ffffff;
+  text-align: center;
+  border-radius: 30% 1%;
+
+}
+
+.session-btn-text {
+  color: #00a2ff;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 5px;
+  font-size: 20px;
 }
 
 .sign-in {
   position: absolute;
-  top: 85%;
+  top: 75%;
   right: 80px;
+  text-align: center;
   font-size: 5vmin;
-  color: #ffffff;
+  color: #111010;
+  width: 120px;
+  background: #ffffff;
+  text-align: center;
+  border-radius: 30% 1%;
 }
 
 /* 商品一覧 */
@@ -64,15 +85,13 @@
 }
 
 .recruitment-lists {
-  width: 70vw;
+  width: 80vw;
   display: flex;
   justify-content: center;
 }
 
 .recruitment-list {
   display: flex;
-  justify-content: space-between;
-  width: 50vh;
   padding: 1vw;
 }
 
@@ -86,17 +105,57 @@
 }
 
 .recruitment-info {
+  position: relative;
+  width: 50vw;
   background-color: #FFF;
   color: black;
   padding: 1vw;
+  border-radius: 0px 40px 40px 0px; 
 }
 
 .recruitment-name {
+  position: absolute;
+  left: 5px;
+  top: 5px;
   font-size: 7vh;
   color: #000d58;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.r-category {
+  position: absolute;
+  left: 5px;
+  top: 80px;
+}
+
+.r-content {
+  position: absolute;
+  left: 5px;
+  top: 110px;
+  font-size: 5vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.recruitment-user-name {
+  position: absolute;
+  left: 5px;
+  top: 70%;
+  font-size: 8vh;
+  color: #000d58;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .recruitment-price {
+  position: absolute;
+  left: 60%;
+  top: 70%;
   color: #ff0000;
   font-size: 8vh;
   display: flex;

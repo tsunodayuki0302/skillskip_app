@@ -1,7 +1,7 @@
 <div class="recruitment-sell-contents">
   <h3 class="recruitments-sell-title">新規生徒募集</h3>
   <div class="recruitment-sell-main">
-  <%= form_with url: recruitments_path, local: true do |f| %>
+  <%= form_with model: @recruitment, url: recruitments_path, local: true do |f| %>
     <%# 画像 %>
     <div class="img-upload">
       <div class="weight-bold-text">

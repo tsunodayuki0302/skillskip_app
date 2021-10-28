@@ -10,9 +10,16 @@
     <p class='title-service3'>ゲーマー育成アプリ</p>
     <% if user_signed_in? %>
     <% else %>
-    <%= link_to 'ログイン', new_user_session_path, class: "sign" %>
-    <%= link_to '新規登録', new_user_registration_path, class: "sign-in" %>
+      <%= link_to(new_user_session_path, class: "sign") do %>
+        <span class='session-btn-text'>ログイン</span>
+        <%= image_tag 'login.png' , size: '160x80',class: "" %>
+      <% end %>
+      <%= link_to(new_user_registration_path, class: "sign-in") do %>
+        <span class='session-btn-text'>新規登録</span>
+        <%= image_tag 'sign.jpeg' , size: '120x80',class: "" %>
+      <% end %>
     <% end %>
+
   </div>
   <%# /画面上部の「ゲーマー育成アプリ」帯部分  %>
 
@@ -31,15 +38,28 @@
           </div>
           <% end %> 
         </div>
-      <div class='recruitment-info'>
-        <h3 class='recruitment-name'>
-          <%= recruitment.heading %>
-        </h3>
-        <div class='recruitment-price'>
-          <span><%= recruitment.price %>円</span>
-        </div>
+        <div class='recruitment-info'>
+          <h3 class='recruitment-name'>
+            <%= recruitment.heading %>
+          </h3>
+          <div class= 'r-category'>
+            <%= recruitment.category.root.name %>
+            ＜
+            <%= recruitment.category.parent.name %>
+            ＜
+            <%= recruitment.category.name %>
+          </div>
+          <div class= 'r-content'>
+            <%= recruitment.content %>
+          </div>
+          <div class="recruitment-user-name">
+            <%= recruitment.user.nickname %>
+          </div>
+          <div class='recruitment-price'>
+            <span><%= recruitment.price %>円</span>
+          </div>
       <% end %>
-      </div>
+        </div>
     </li>
   </ul>
     <% end %>

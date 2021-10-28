@@ -13,7 +13,6 @@ class RecruitmentsController < ApplicationController
 
   def create
     @recruitment = Recruitment.new(recruitment_params)
-    binding.pry
     if @recruitment.save
       redirect_to root_path(@recruitment)
     else
