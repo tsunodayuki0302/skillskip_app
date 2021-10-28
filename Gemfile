@@ -67,3 +67,5 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'pry-rails'
+
+gem 'carrierwave', '~> 2.0'

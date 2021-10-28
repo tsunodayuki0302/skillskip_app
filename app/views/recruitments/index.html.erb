@@ -12,11 +12,11 @@
     <% else %>
       <%= link_to(new_user_session_path, class: "sign") do %>
         <span class='session-btn-text'>ログイン</span>
-        <%= image_tag 'login.png' , size: '160x80',class: "" %>
+        <%= image_tag 'login.png' , size: '80x120',class: "login-png" %>
       <% end %>
       <%= link_to(new_user_registration_path, class: "sign-in") do %>
         <span class='session-btn-text'>新規登録</span>
-        <%= image_tag 'sign.jpeg' , size: '120x80',class: "" %>
+        <%= image_tag 'shinki.png' , size: '80x120',class: "login-png" %>
       <% end %>
     <% end %>
 
@@ -53,6 +53,7 @@
             <%= recruitment.content %>
           </div>
           <div class="recruitment-user-name">
+            <%= image_tag current_user.avatar.to_s, class: "user-image" %>
             <%= recruitment.user.nickname %>
           </div>
           <div class='recruitment-price'>

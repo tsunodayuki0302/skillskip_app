@@ -51,8 +51,14 @@ color: #FAFAFA;
 font-size: 4vmin;
 }
 
+.user-name-icon {
+  display: flex;
+}
+
 .user-image {
-  height: 5vh;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
 }
 
 .light-name {
