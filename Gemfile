@@ -69,3 +69,4 @@ gem 'haml-rails'
 gem 'pry-rails'
 
 gem 'carrierwave', '~> 2.0'
+gem 'ransack'

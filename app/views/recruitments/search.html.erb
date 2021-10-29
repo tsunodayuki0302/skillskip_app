@@ -1,0 +1,52 @@
+<%= render "shared/header" %>
+<div class='main'>
+  <% @results.each do |r| %>
+<div class=" search-r">
+  <%= r.name %>
+  の投稿
+</div>
+  <% end %>
+
+  <div class='recruitment-contents'>
+    <ul class='recruitment-lists'>
+      <% @recruitments.each do |recruitment| %>
+      <li class='recruitment-list'>
+        <div class='recruitment-img-content'>
+        <%= link_to recruitment_path(recruitment.id) do %>
+          <%= image_tag recruitment.image, class: "recruitment-img" %>
+          <%# if recruitment.record != nil  %>
+          <%#<div class='sold-out'>
+            <span>受付終了!!</span>
+          </div>
+          <% end %> 
+        </div>
+        <div class='recruitment-info'>
+          <h3 class='recruitment-name'>
+            <%= recruitment.heading %>
+          </h3>
+          <div class= 'r-category'>
+            <%= recruitment.category.root.name %>
+            ＜
+            <%= recruitment.category.parent.name %>
+            ＜
+            <%= recruitment.category.name %>
+          </div>
+          <div class= 'r-content'>
+            <%= recruitment.content %>
+          </div>
+          <div class="recruitment-user-name">
+            <%= image_tag current_user.avatar.to_s, class: "user-image" %>
+            <%= recruitment.user.nickname %>
+          </div>
+          <div class='recruitment-price'>
+            <span><%= recruitment.price %>円</span>
+          </div>
+      <% end %>
+        </div>
+    </li>
+  </ul>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to '戻る', root_path %>

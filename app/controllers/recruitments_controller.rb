@@ -2,6 +2,7 @@ class RecruitmentsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_array, only: [:new, :create, :show, :edit]
   before_action :set_recruitment, only: [ :edit, :update, :show, :destroy]
+  before_action :set_q, only: [:index, :search]
 
   def index
     @recruitments = Recruitment.order("created_at DESC")
@@ -31,10 +32,21 @@ class RecruitmentsController < ApplicationController
     @category_grandchildren = Category.find("#{params[:child_id]}").children
   end
 
+  def search
+    @results = @q.result
+    @recruitments = Recruitment.all
+  end
+
   private
+
+  def set_q
+    @q = Category.ransack(params[:q])
+  end
+
   def recruitment_params
     params.require(:recruitment).permit(:heading, :content, :category_id, :price, :image).merge(user_id: current_user.id)
   end
+
   def set_array
     @category_parent_array = Category.where(ancestry: nil)
   end
