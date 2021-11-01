@@ -5,7 +5,7 @@
 ## ゲームの生徒募集と購入。
 
 # URL
-##
+## https://git.heroku.com/skill-skip-36887.git
 
 
 # テスト用アカウント
