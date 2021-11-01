@@ -1,76 +1,29 @@
-# テーブル設計
+# アプリケーション名
+## SkillSkip
 
-## users テーブル
+# アプリケーション概要
+## ゲームの生徒募集と購入。
 
-| Column             | Type   | Options                   |
-| ------------------ | ------ | ------------------------- |
-| identification     | string | unique: true, null: false |
-| nickname           | string | null: false               |
-| email              | string | unique: true, null: false |
-| encrypted_password | string | null: false               |
-| achievement        | string |                           |
-| profile            | string | null: false               |
+# URL
 
+# テスト用アカウント
+## ログインID/pass 
+## aaa@gmail.com/aaa111
 
-### Association
+# 利用方法
+## 新規登録・ログイン
+## 新規募集
 
-- has_many :recruitments
-- has_many :comments
-- has_many :records
+# 目指した課題解決
+## 生徒がコーチにお金を払うことで徹底した授業を受けることができる。
 
-## recruitment テーブル
+# 洗い出した要件
+## 
 
-| Column                 | Type       | Options                        |
-| ---------------------- | ---------- | ------------------------------ |
-| heading                | string     | null: false                    |
-| content                | text       | null: false                    |
-| category_id            | integer    | null: false                    |
-| price                  | string     | null: false                    |
-| user                   | references | null: false, foreign_key: true        |
+# 実装した機能についての画像やGIFおよびその説明
+## 
 
-### Association
+# 実装予定の機能
 
-- belongs_to :user
-- has_many :comment
-- has_many :record
+# データベース設計
 
-## record テーブル
-
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| user          | references | null: false, foreign_key: true |
-| recruitment   | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- belongs_to :recruitment
-- has_one :order
-
-
-## order テーブル
-
-| Column              | Type       | Options                        |
-| ------------------- | ---------- | ------------------------------ |
-| day                 | string     | null: false                    |
-| record              | references | null: false, foreign_key: true |
-
-
-### Association
-
-- belongs_to :record
-
-
-## comment テーブル
-
-| Column              | Type       | Options                        |
-| ------------------- | ---------- | ------------------------------ |
-| letter              | string     | null: false                    |
-| user                | references | null: false, foreign_key: true |
-| recruitment         | references | null: false, foreign_key: true |
-
-
-### Association
-
-- belongs_to :user
-- belongs_to :recruitment

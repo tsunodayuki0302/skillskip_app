@@ -1,0 +1,21 @@
+<div class='category_wrapper'>
+  <div class='category_links'>
+    <%  @category_links.each do |category| %>
+      <%= link_to category.name, category_path(category) %>
+  </div>
+</div>
+
+<div class='products-container'>
+  <div class='products-index'>
+    <div class='title'> 
+      <%= "#{@category.name}の商品一覧" %>
+        <div class='title__border'>
+        <%= if @recruitments %>
+          <ul class='lists'></ul>
+          <%= render "recruitments/re3cruitment", recruitments: @recruitments %>
+          <%= paginate @recruitments %>
+        </div>
+    </div>
+  </div>
+</div>
+    = 

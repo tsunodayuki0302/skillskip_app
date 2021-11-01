@@ -34,7 +34,6 @@ class RecruitmentsController < ApplicationController
 
   def search
     @results = @q.result
-    @recruitments = Recruitment.all
   end
 
   private

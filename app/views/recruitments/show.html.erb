@@ -5,11 +5,13 @@
 <div class='recruitment-user'>
   <span class='recruitment-userーprofile'>出品者情報</span>
   <div class='user-profile'>
-    <%= image_tag @recruitment.user.image, class: "recruitment-user-img"  %>
-    <%= link_to @recruitment.user.nickname, class: "recruitment-user-name"  %>
+    <%= image_tag @recruitment.user.avatar.to_s, class: ".user-name-icon"  %>
+    <%= link_to @recruitment.user.nickname, class: "user-name"  %>
   </div>
+  <div >
+  受付中
 </div>
-
+</div>
 
 <div class="recruitment-show">
   <div class="recruitment-box">

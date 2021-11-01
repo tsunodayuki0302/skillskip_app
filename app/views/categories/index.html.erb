@@ -1,0 +1,19 @@
+<h1>カテゴリー一覧</h1>
+<ul class='categories'>
+  <% @parents.each do |parent| %>
+  <li class='parents'>
+  <%= link_to "#{parent.name}", category_path(parent) %>
+    <ul class='categories__children'>
+      <% parent.children.each do |child| %>
+      <li class='childern'>
+      <%= link_to "#{child.name}", category_path(child) %>
+        <ul class='categories__grandchildren'>
+          <% child.children.each do |grandchild| %>
+          <li>
+          <%= link_to "#{grandchild.name}", category_path(grandchild) %>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
