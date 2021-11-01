@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "recruitments#index"
   resources :users
+  resources :categories
   resources :recruitments do
     collection do
       get 'get_category_children', defaults: { format: 'json' }
