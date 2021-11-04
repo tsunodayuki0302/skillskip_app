@@ -1,13 +1,31 @@
+.main {
+  background-color: #000d58;
+}
+
 .recruitment-user {
   display: flex;
   width: 100%;
+  position: relative;
 }
 
 .recruitment-userーprofile {
   font-size: 40px;
 }
 
-.user-nickname {
+.user-profile {
+  padding-left: 20px;
   color: #000000;
   font-size: 40px;
 }
+
+.status {
+position: absolute;
+right: 20px;
+  background-color: chartreuse;
+  font-size: 40px;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: auto;
+  margin: 8px;
+}
+
