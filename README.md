@@ -38,17 +38,16 @@ aaa@gmail.com/aaa111
 ## 新規投稿機能
 ![1a4d1459d3833784ec017a31350d1d31](https://user-images.githubusercontent.com/89972275/140512138-201c5100-1619-4f52-8571-469aa1e966f9.gif)
 
+# 工夫したポイント
+・新規投稿する際、カテゴリーからゲーム名を登録できるようにした。
+
 # 実装予定の機能
-カテゴリー検索機能
-DM機能
-購入機能
-レビュー機能
-
-# データベース設計
-
+・カテゴリー検索機能
+・DM機能
+・購入機能
+・レビュー機能
 
 # テーブル設計
-
 
 ## users テーブル
 
@@ -125,3 +124,9 @@ DM機能
 - belongs_to :user
 - belongs_to :recruitment
 
+# 環境環境
+・フロントエンド：HTML5/CSS(Bootstrap)/JavaScript/jQuery/Ajax
+・バックエンド：Ruby on Rails(6.0.0)/Ruby(2.6.5)/JavaScript
+・データベース：MySQL(5.6.50)/Sequel Pro
+・インフラ：Heroku
+・タスク管理：GitHub
