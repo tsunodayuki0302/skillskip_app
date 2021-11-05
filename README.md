@@ -34,9 +34,9 @@ aaa@gmail.com/aaa111
 
 # 実装した機能についての画像やGIFおよびその説明
 ## ユーザー管理機能
-https://gyazo.com/f0569f8dfbe76203d09c8abd0164ca39
+![f0569f8dfbe76203d09c8abd0164ca39](https://user-images.githubusercontent.com/89972275/140509830-6897210b-4250-4622-bc5d-467f326a66e9.gif)
 ## 新規投稿機能
-https://gyazo.com/1a4d1459d3833784ec017a31350d1d31
+![1a4d1459d3833784ec017a31350d1d31](https://user-images.githubusercontent.com/89972275/140512138-201c5100-1619-4f52-8571-469aa1e966f9.gif)
 
 # 実装予定の機能
 カテゴリー検索機能
