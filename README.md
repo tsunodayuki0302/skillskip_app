@@ -9,16 +9,16 @@ https://git.heroku.com/skill-skip-36887.git
 
 
 # テスト用アカウント
-ログインID/pass 
-aaa@gmail.com/aaa111
+- ログインID/aaa@gmail.com
+- pass/aaa111
 
 # 利用方法
-新規登録・ログイン
-新規募集
+- 新規登録・ログイン
+- 新規募集
 
 # 目指した課題解決
-コーチが募集することで購入した生徒をコーチングできる。
-ゲームの腕に自信がない人を短期間でうまくすることができる。
+- コーチが募集することで購入した生徒をコーチングできる。
+- ゲームの腕に自信がない人を短期間でうまくすることができる。
 
 # 洗い出した要件
 
@@ -39,13 +39,13 @@ aaa@gmail.com/aaa111
 ![1a4d1459d3833784ec017a31350d1d31](https://user-images.githubusercontent.com/89972275/140512138-201c5100-1619-4f52-8571-469aa1e966f9.gif)
 
 # 工夫したポイント
-・新規投稿する際、カテゴリーからゲーム名を登録できるようにした。
+- 新規投稿する際、カテゴリーからゲーム名を登録できるようにした。
 
 # 実装予定の機能
-・カテゴリー検索機能
-・DM機能
-・購入機能
-・レビュー機能
+- カテゴリー検索機能
+- DM機能
+- 購入機能
+- レビュー機能
 
 # テーブル設計
 
@@ -125,8 +125,8 @@ aaa@gmail.com/aaa111
 - belongs_to :recruitment
 
 # 環境環境
-・フロントエンド：HTML5/CSS(Bootstrap)/JavaScript/jQuery/Ajax
-・バックエンド：Ruby on Rails(6.0.0)/Ruby(2.6.5)/JavaScript
-・データベース：MySQL(5.6.50)/Sequel Pro
-・インフラ：Heroku
-・タスク管理：GitHub
+- フロントエンド：HTML5/CSS(Bootstrap)/JavaScript/jQuery/Ajax
+- バックエンド：Ruby on Rails(6.0.0)/Ruby(2.6.5)/JavaScript
+- データベース：MySQL(5.6.50)/Sequel Pro
+- インフラ：Heroku
+- タスク管理：GitHub
