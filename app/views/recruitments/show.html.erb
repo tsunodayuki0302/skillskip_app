@@ -6,25 +6,28 @@
     <span class='recruitment-userーprofile'>出品者情報</span>
     <div class='user-profile'>
       <%= image_tag @recruitment.user.avatar.to_s, class: "user-image" %>
-      <%= link_to @recruitment.user.nickname, class: "recruitment-user-nickname" %>
+      <%= link_to @recruitment.user.nickname, "#", class: "recruitment-user-nickname" %>
     </div>
     <div class='status'>
     受付中
     </div>
   </div>
 
-  <div class="recruitment-show">
+  <div class="recruitment-shows">
     <div class="recruitment-box">
-      <h2 class="name">
-        <%= @recruitment.heading %>
-      </h2>
-      <div class="">
+      <div class='recruitment-show-title'>
+        <h2 class="recruitment-show-name">
+          <%= @recruitment.heading %>
+        </h2>
+      </div>
+
+      <div class="recruitment-show-category">
           <%= @recruitment.category.name %>
       </div>
 
 
       <div class="recruitment-img-content">
-        <div class="">
+        <div class="recruitment-img-show">
         <%= image_tag @recruitment.image %>
         </div>
         <%# if @item.purchase_record != nil  %>
@@ -34,26 +37,25 @@
         <% end %>
       </div>
 
-      <div class="">
-        <div class="">
+      <div class="recruitment-sbow-explanation">
+        <div class="recruitment-sbow-heading">
           <%= @recruitment.heading %>
         </div>
-        <div class="">
+        <div class="recruitment-sbow-content">
           <%= @recruitment.content %>
         </div>
-        <div class=''>
-
+        <div class='recruitment-sbow-price'>
         <%= @recruitment.price %>
         </div>
       </div>
 
     
       <% if user_signed_in? && current_user.id == @recruitment.user_id  %>
-      <%= link_to "商品の編集", edit_recruitment_path(@recruitment.id), method: :get, class: "item-red-btn" %>
+      <%= link_to "商品の編集", edit_recruitment_path(@recruitment.id), method: :get, class: "recruitment-blue-btn" %>
       <p class="or-text">or</p>
       <%= link_to "削除", recruitment_path(@recruitment.id), method: :delete, class:"recruitment-destroy" %>
       <% elsif user_signed_in?  %>
-      <%= link_to "購入画面に進む", '#' ,class:"item-red-btn"%>
+      <%= link_to "購入画面に進む", '#' ,class:"recruitment-blue-btn"%>
       <% end %>
       </div>
     </div>

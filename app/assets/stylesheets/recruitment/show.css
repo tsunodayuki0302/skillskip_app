@@ -1,5 +1,7 @@
-.main {
-  background-color: #000d58;
+.recruitment-show {
+  border-top: 1px solid #6e6e6e;
+  background-color: #192437;
+  color: #ffffff;
 }
 
 .recruitment-user {
@@ -14,13 +16,16 @@
 
 .user-profile {
   padding-left: 20px;
-  color: #000000;
   font-size: 40px;
 }
 
+.recruitment-user-nickname {
+  color: #ffffff;
+}
+
 .status {
-position: absolute;
-right: 20px;
+  position: absolute;
+  right: 20px;
   background-color: chartreuse;
   font-size: 40px;
   border: 2px solid #000000;
@@ -29,3 +34,26 @@ right: 20px;
   margin: 8px;
 }
 
+.recruitment-shows {
+
+}
+
+.recruitment-box {
+
+}
+
+recruitment-show-title
+
+.recruitment-show-name {
+
+}
+
+.recruitment-show-category {
+
+}
+
+.recruitment-img-content {
+
+}
+
+.
