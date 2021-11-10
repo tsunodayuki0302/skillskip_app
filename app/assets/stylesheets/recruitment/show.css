@@ -35,25 +35,13 @@
 }
 
 .recruitment-shows {
-
+  position: relative;
 }
 
 .recruitment-box {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+  width: 80%;
 }
-
-recruitment-show-title
-
-.recruitment-show-name {
-
-}
-
-.recruitment-show-category {
-
-}
-
-.recruitment-img-content {
-
-}
-
-.
