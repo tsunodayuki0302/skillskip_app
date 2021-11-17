@@ -42,7 +42,7 @@
     <ul class='recruitment-lists'>
       <% @recruitments.each do |r| %>
       <li class='recruitment-list'>
-        <div class='recruitment-img-content'>
+        <div class='r-img-content'>
         <%= link_to recruitment_path(r.id) do %>
           <%= image_tag r.image, class: "recruitment-img" %>
           <%# if r.record != nil  %>

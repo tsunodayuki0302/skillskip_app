@@ -9,63 +9,71 @@
       <%= link_to @recruitment.user.nickname, "#", class: "recruitment-user-nickname" %>
     </div>
     <div class='status'>
+    <%# <%= if %>
     受付中
     </div>
   </div>
 
   <div class="recruitment-shows">
-    <div class="recruitment-box">
+    <div class="recruitment-show-content">
       <div class='recruitment-show-title'>
-        <h2 class="recruitment-show-name">
+        <span class="contents-heading">
           <%= @recruitment.heading %>
-        </h2>
+        </span>
       </div>
-
-      <div class="recruitment-show-category">
-          <%= @recruitment.category.name %>
-      </div>
-
-
-      <div class="recruitment-img-content">
-        <div class="recruitment-img-show">
-        <%= image_tag @recruitment.image %>
-        </div>
+      <span class="contents-image">
+        <%= image_tag @recruitment.image, class: "content-image" %>
         <%# if @item.purchase_record != nil  %>
         <%#  <div class="sold-out">
           <span>受付終了！</span>
         </div> 
         <% end %>
+      </span>
+      <div class="recruitment-show-category">
+        <span class="contents-category">
+          <%= @recruitment.category.name %>
+        </span>
       </div>
-
       <div class="recruitment-sbow-explanation">
-        <div class="recruitment-sbow-content">
+        <span class="contents-content">
           <%= @recruitment.content %>
-        </div>
-        <div class='recruitment-sbow-price'>
-        <%= @recruitment.price %>
-        </div>
+        </span>
       </div>
-
-    
+      <div class='recruitment-sbow-price'>
+        <span class="contents-price">
+          <%= @recruitment.price %>
+          円
+        </span>
+      </div>
+  
+    <div class="recruitment-edit-purchase">
       <% if user_signed_in? && current_user.id == @recruitment.user_id  %>
-      <%= link_to "商品の編集", edit_recruitment_path(@recruitment.id), method: :get, class: "recruitment-blue-btn" %>
-      <p class="or-text">or</p>
-      <%= link_to "削除", recruitment_path(@recruitment.id), method: :delete, class:"recruitment-destroy" %>
-      <% elsif user_signed_in?  %>
-      <%= link_to "購入画面に進む", '#' ,class:"recruitment-blue-btn"%>
-      <% end %>
+      <div class="recruitment-show-btn">
+        <%= link_to "商品の編集", edit_recruitment_path(@recruitment.id), method: :get, class: "recruitment-btn-font" %>
       </div>
+      <p class="or-text">or</p>
+      <div class="recruitment-delete-btn">
+        <%= link_to "削除", recruitment_path(@recruitment.id), method: :delete, class: "recruitment-btn-font" %>
+      </div>
+      <% elsif user_signed_in?  %>
+      <div class="recruitment-show-btn">
+        <%= link_to "購入画面に進む", '#' ,class:"recruitment-btn-font"%>
+      </div>
+      <% end %>
     </div>
-    <%# /商品の概要 %>
+      <%# /商品の概要 %>
 
     <div class="links">
-      <a href="#" class="change-item-btn">
-        ＜ 前の商品
+      <a href="#" class="change-recruitment-btn">
+        ＜ 前の投稿
       </a>
-      <a href="#" class="change-item-btn">
-        後ろの商品 ＞
+      <a href="#" class="change-recruitment-btn">
+        後ろの投稿 ＞
       </a>
     </div>
-    <a href="#" class="another-item"><%= @recruitment.category.name %>をもっと見る</a>
+    <div class='category-rinks'>
+      <%= image_tag 'search.jpeg' , size: '30x30' ,class: "search-btn-icon" %>
+      <a href="#" class="another-recruitment"><%= @recruitment.category.name %>をもっと見る</a>
+    </div>
   </div>
 </div>
