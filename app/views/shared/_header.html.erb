@@ -19,7 +19,7 @@
     <div class='lists-right'>
     <% if user_signed_in? %>
       <div class='user-name-icon'>
-      <%= image_tag current_user.avatar.to_s, class: "user-image" %>
+      <%= image_tag current_user.avatar.to_s, class: "user-image" %> 
       <%= link_to current_user.nickname, '#', class: "light-name" %>
       </div>
     <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "light-name" %>
