@@ -52,8 +52,8 @@
         <%= link_to "投稿の編集", edit_recruitment_path(@recruitment.id), method: :get, class: "recruitment-btn-font" %>
       </div>
       <p class="or-text">or</p>
-      <div class="recruitment-delete-btn">
-        <%= link_to "削除", recruitment_path(@recruitment.id), method: :delete, class: "recruitment-btn-font" %>
+      <div class="recruitment-show-btn">
+        <%= link_to "削除", recruitment_path(@recruitment.id), method: :delete, class: "recruitment-btn-font  aa" %>
       </div>
       <% elsif user_signed_in?  %>
       <div class="recruitment-show-btn">

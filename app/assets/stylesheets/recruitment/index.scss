@@ -1,216 +1,172 @@
-.main {
-  background-color: #000d58;
-  color: #ffffff;
+@media all and (min-width: 1024px) { 
+
+  .main {
+    background-color: #000d58;
+    color: #ffffff;
+  }
+
+  .title-top img {
+    position: relative;
+    background-position:top center;
+    background-size:contain;
+    width:100%;
+    animation: anime1 4s ease;
+  }
+    
+  @keyframes anime1 {
+    0% {
+        opacity: 0; /* 透明度指定 */
+        top: 100px; /* 位置指定 */
+    }
+    100% {
+        opacity: 1; /* 透明度指定 */
+        top: 0; /* 位置指定 */
+    }
+  }
+
+  .title-service1 {
+    position: absolute;
+    text-shadow: 5px 4px 3px #111010;
+    color: #fff200;
+    left: 40px;
+    top: 30%;
+    font-size: 8vmin;
+  }
+
+  .title-service2 {
+    position: absolute;
+    text-shadow: 5px 4px 3px #111010;
+    left: 40px;
+    top: 45%;
+    font-size: 6vmin;
+  }
+
+  .title-service3 {
+    position: absolute;
+    text-shadow: 5px 4px 3px #111010;
+    left: 40px;
+    top: 60%;
+    font-size: 8vmin;
+  }
+
+  .sign {
+    position: absolute;
+    top: 75%;
+    right: 300px;
+    font-size: 5vmin;
+    color: #111010;
+    width: 120px;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 25% 1%;
+
+  }
+
+  .session-btn-text {
+    color: #00a2ff;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+
+  .sign-in {
+    position: absolute;
+    top: 75%;
+    right: 80px;
+    text-align: center;
+    font-size: 5vmin;
+    color: #111010;
+    width: 120px;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 25% 1%;
+  }
+
+  .login-png {
+    width: 60%;
+  }
+  /* 検索機能 */
+
+  // .category-form {
+  //   display: flex;
+  //   justify-content: center;
+  // }
+
+
+  // .c-name {
+  //   color: #ffffff;
+  //   font-size: 30px;
+  // }
+
+  // .c-color {
+  //   color: #000d58;
+  // }
+
+  /* 商品一覧 */
+
+  .title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 0;
+  }
+
+  .title {
+    font-size: 10vh;
+    line-height: 1.4;
+    font-weight: bold;
+  }
+
+  .recruitment-contents {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  r-content {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .r-img-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .recruitment-img {
+    width: 300px;
+    height: 300px;
+  }
+
+  // 商品一覧
+
+  /* 投稿アイコン */
+
+  .purchase-btn {
+    width: 120px;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 4%;
+    bottom: 32px;
+    right: 32px;
+    position: fixed;
+    padding: 15px;
+  }
+
+  .purchase-btn-text {
+    color: #00a2ff;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+
+  .purchase-btn-icon {
+    width: 60%;
+  }
 }
 
-.title-top img {
-  position: relative;
-  background-position:top center;
-  background-size:contain;
-  width:100%;
-}
-
-.title-service1 {
-  position: absolute;
-  text-shadow: 5px 4px 3px #111010;
-  color: #fff200;
-  left: 40px;
-  top: 30%;
-  font-size: 8vmin;
-}
-
-.title-service2 {
-  position: absolute;
-  text-shadow: 5px 4px 3px #111010;
-  left: 40px;
-  top: 45%;
-  font-size: 6vmin;
-}
-
-.title-service3 {
-  position: absolute;
-  text-shadow: 5px 4px 3px #111010;
-  left: 40px;
-  top: 60%;
-  font-size: 8vmin;
-}
-
-.sign {
-  position: absolute;
-  top: 75%;
-  right: 300px;
-  font-size: 5vmin;
-  color: #111010;
-  width: 120px;
-  background: #ffffff;
-  text-align: center;
-  border-radius: 25% 1%;
-
-}
-
-.session-btn-text {
-  color: #00a2ff;
-  display: block;
-  text-decoration: none;
-  margin-bottom: 5px;
-  font-size: 20px;
-}
-
-.sign-in {
-  position: absolute;
-  top: 75%;
-  right: 80px;
-  text-align: center;
-  font-size: 5vmin;
-  color: #111010;
-  width: 120px;
-  background: #ffffff;
-  text-align: center;
-  border-radius: 25% 1%;
-}
-
-.login-png {
-  width: 60%;
-}
-/* 検索機能 */
-
-.category-form {
-  display: flex;
-  justify-content: center;
-}
-
-
-.c-name {
-  color: #ffffff;
-  font-size: 30px;
-}
-
-.c-color {
-  color: #000d58;
-}
-
-/* 商品一覧 */
-
-.recruitment-contents {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10vh 0;
-}
-
-.recruitment-contents>.title {
-  font-size: 10vh;
-  line-height: 1.4;
-  font-weight: bold;
-}
-
-.recruitment-lists {
-  width: 80vw;
-  display: flex;
-  justify-content: center;
-}
-
-.recruitment-list {
-  display: flex;
-  padding: 1vw;
-}
-
-.r-img-content {
-  position: relative;
-}
-
-.recruitment-img {
-  border-radius: 40px 0px 0px 40px;
-  width: 200px;
-  height: 200px;
-}
-
-.recruitment-info {
-  position: relative;
-  height: 200px;
-  width: 600px;
-  background-color: #FFF;
-  color: black;
-  padding: 1vw;
-  border-radius: 0px 40px 40px 0px; 
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.recruitment-name {
-  position: absolute;
-  left: 5px;
-  top: 5px;
-  font-size: 7vh;
-  color: #000d58;
-}
-
-.r-category {
-  position: absolute;
-  left: 5px;
-  top: 80px;
-}
-
-.r-content {
-  position: absolute;
-  left: 5px;
-  top: 110px;
-  font-size: 5vh;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: #000d58;
-}
-
-
-.recruitment-user-name {
-  position: absolute;
-  left: 5px;
-  top: 70%;
-  font-size: 8vh;
-  color: #000d58;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.recruitment-price {
-  position: absolute;
-  left: 60%;
-  top: 70%;
-  color: #ff0000;
-  font-size: 8vh;
-  display: flex;
-  justify-content: space-between;
-}
-
-.new-content {
-  color: #ffffff;
-  font-size: 100px;
-}
-
-/* 投稿アイコン */
-
-.purchase-btn {
-  width: 120px;
-  background: #ffffff;
-  text-align: center;
-  border-radius: 4%;
-  bottom: 32px;
-  right: 32px;
-  position: fixed;
-  padding: 15px;
-}
-
-.purchase-btn-text {
-  color: #00a2ff;
-  display: block;
-  font-size: 18px;
-  text-decoration: none;
-  margin-bottom: 5px;
-}
-
-.purchase-btn-icon {
-  width: 60%;
-}
+// @media all and (max-width: 480px) { }

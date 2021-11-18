@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
 <div class='main'>
- <%# 画面上部の「ゲーマー育成アプリ」帯部分 %>
+<%# 画面上部の「ゲーマー育成アプリ」帯部分 %>
   <%=  %>
   <div class ='title-top'>
     <%= image_tag "skill01.jpg" %>
@@ -37,45 +37,26 @@
 
 
   <%# 投稿一覧 %>
-  <div class='recruitment-contents'>
+  <div class="title-box">
     <h2 class='title'>新規募集一覧</h2>
-    <ul class='recruitment-lists'>
-      <% @recruitments.each do |r| %>
-      <li class='recruitment-list'>
-        <div class='r-img-content'>
+  </div>
+  <div class='recruitment-contents'>
+    <% @recruitments.each do |r| %>
+      <div class='r-content'>
         <%= link_to recruitment_path(r.id) do %>
-          <%= image_tag r.image, class: "recruitment-img" %>
-          <%# if r.record != nil  %>
-          <%#<div class='sold-out'>
-            <span>受付終了!!</span>
+          <div class="r-img-content">
+            <%= image_tag r.image, class: "recruitment-img" %>
+            <%# if r.record != nil  %>
+            <%#<div class='sold-out'>
+              <span>受付終了!!</span>
+            </div>
+            <% end %> 
           </div>
-          <% end %> 
-        </div>
-        <div class='recruitment-info'>
-          <h3 class='recruitment-name'>
-            <%= r.heading %>
-          </h3>
-          <div class= 'r-category'>
-            <%= r.category.root.name %>
-            ＜
-            <%= r.category.parent.name %>
-            ＜
-            <%= r.category.name %>
+          <div class="r-title">
+            
           </div>
-          <div class= 'r-content'>
-            <%= r.content %>
-          </div>
-          <div class="recruitment-user-name">
-            <%= image_tag r.user.avatar.to_s, class: "user-image" %>
-            <%= r.user.nickname %>
-          </div>
-          <div class='recruitment-price'>
-            <span><%= r.price %>円</span>
-          </div>
-      <% end %>
-        </div>
-    </li>
-  </ul>
+        <% end %>
+      </div>
     <% end %>
     <% if @recruitments[0] == nil %>
     <div class='new-content'>

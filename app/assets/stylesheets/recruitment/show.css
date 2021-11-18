@@ -134,6 +134,7 @@
 .recruitment-edit-purchase {
   display: flex;
   justify-content: space-around;
+  
 }
 
 .recruitment-show-btn {
@@ -149,31 +150,19 @@
   font-size: 3vmin;
 }
 
+.aa{
+  color: white;
+}
+
+.aa:hover {
+  color: #ffffff;
+}
+
 .recruitment-show-btn:hover {
   color: #ffffff;
   background-color: #3a64ff;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all  0.5s ease;
-}
-
-.recruitment-delete-btn {
-  background: #ffffff;
-  box-shadow: 0px 5px 0px 0px #bbbbbb;
-  border-radius: 7px;
-  width: 30%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3vmin;
-}
-
-.recruitment-delete-btn:hover {
-  background-color: #bbbbbb;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
   -o-transition: all 0.5s ease;
   transition: all  0.5s ease;
 }
@@ -209,3 +198,4 @@ a.recruitment-btn-font:link {
   font-size: 3vmin;
   padding-left: 10px;
 }
+
