@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "recruitments#index"
-  resources :users
+  resources :users 
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
   resources :categories
   resources :recruitments do
     collection do

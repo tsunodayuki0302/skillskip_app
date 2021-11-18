@@ -49,7 +49,7 @@
     <div class="recruitment-edit-purchase">
       <% if user_signed_in? && current_user.id == @recruitment.user_id  %>
       <div class="recruitment-show-btn">
-        <%= link_to "商品の編集", edit_recruitment_path(@recruitment.id), method: :get, class: "recruitment-btn-font" %>
+        <%= link_to "投稿の編集", edit_recruitment_path(@recruitment.id), method: :get, class: "recruitment-btn-font" %>
       </div>
       <p class="or-text">or</p>
       <div class="recruitment-delete-btn">

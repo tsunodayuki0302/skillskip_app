@@ -100,6 +100,7 @@
 
 .contents-content {
   font-size: 3vmin;
+  white-space: pre-line;
 }
 
 .recruitment-sbow-price {
@@ -135,7 +136,6 @@
   justify-content: space-around;
 }
 
-/* 文字白くする！！！ */
 .recruitment-show-btn {
   color: #ffffff;
   background: #00a2ff;
@@ -180,10 +180,9 @@
 
 a.recruitment-btn-font:link {
   color: #ffffff;
-  text-decoration:none;
+  text-decoration: none;
 }
 
-/* 文字白くする！！！ */
 .or-text {
   font-size: 5vmin;
 }
