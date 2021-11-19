@@ -1,4 +1,4 @@
-@media all and (min-width: 1024px) { 
+// @media all and (min-width: 1024px) { 
 
   .main {
     background-color: #000d58;
@@ -141,13 +141,50 @@
     height: 200px;
   }
 
+  .r-title-box:hover {
+    height: 70px;
+    width: 200px;
+    background-color: #dedede;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all  0.5s ease;
+  }
+
   .r-title-box {
     height: 70px;
+    width: 200px;
     background-color: #ffffff;
     margin-bottom: 20px;
   }
 
+  .r-title:hover {
+    text-decoration: none;
+    color: #838383;
+  }
 
+  .r-title {
+    overflow:hidden;
+    text-overflow: ellipsis;
+    color: #000000;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .r-user:hover {
+    text-decoration: none;
+    color: #838383;
+  }
+
+  .r-user {
+    overflow:hidden;
+    text-overflow: ellipsis;
+    color: #000000;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
 
 
   // 商品一覧
@@ -176,6 +213,6 @@
   .purchase-btn-icon {
     width: 60%;
   }
-}
+// }
 
 // @media all and (max-width: 480px) { }

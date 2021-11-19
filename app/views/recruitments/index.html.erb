@@ -23,17 +23,17 @@
   </div>
   <%# /画面上部の「ゲーマー育成アプリ」帯部分  %>
 
-    <div class='category-form'>
+    <%# <div class='category-form'> %>
     <%#= search_form_for @q, url: search_recruitments_path do |f| %>
-      <div class="c-name">
+      <%# <div class="c-name"> %>
       <%#= f.label :category, 'カテゴリー検索' %>
-        <div class="c-color">
+        <%# <div class="c-color"> %>
         <%#= f.search_field :name_cont %>
         <%#= f.submit '検索' %>
-        </div>
-      </div>
+        <%# </div> %>
+      <%# </div> %>
     <%# end %>
-    </div>
+    <%# </div> %>
 
 
   <%# 投稿一覧 %>
@@ -53,8 +53,12 @@
             <% end %> 
           </div>
           <div class="r-title-box">
-            .
-            
+            <p class="r-title">
+              <%= r.heading %>
+            </p>
+            <p class="r-user">
+              <%= r.user.nickname %>
+            </p>
           </div>
         <% end %>
       </div>
