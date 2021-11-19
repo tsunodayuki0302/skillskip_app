@@ -158,6 +158,15 @@
   color: #ffffff;
 }
 
+
+.aaa{
+  color: white;
+}
+
+.aaa:hover {
+  color: #ffffff;
+}
+
 .recruitment-show-btn:hover {
   color: #ffffff;
   background-color: #3a64ff;

@@ -50,6 +50,10 @@ color: #FAFAFA;
 font-size: 4vmin;
 }
 
+.path:hover {
+  color: #ffffff;
+}
+
 .user-name-icon {
   display: flex;
 }
@@ -64,4 +68,8 @@ font-size: 4vmin;
   margin-left: 7px;
   font-size: 5vmin;
   color: #FAFAFA;
+}
+
+.light-name:hover {
+  color: #ffffff;
 }
