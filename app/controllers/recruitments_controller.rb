@@ -24,6 +24,32 @@ class RecruitmentsController < ApplicationController
   def show
   end
 
+  # or @recruitment.record != nil edit アクションに追加
+
+  def edit
+  @category_parent_array = Category.where(ancestry: nil) 
+    if current_user.id != @recruitment.user_id
+      redirect_to root_path
+    end
+  end
+
+  def update
+    if @recruitment.update(recruitment_params)
+      redirect_to recruitment_path(@recruitment)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if current_user.id == @recruitment.user_id
+      @recruitment.destroy
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
+  end
+
   def get_category_children
     @category_children = Category.find("#{params[:parent_id]}").children
   end

@@ -27,13 +27,14 @@ window.addEventListener('DOMContentLoaded', function(){
   $('#recruitment_category_id').on('change',function(){
     var parentId = document.getElementById('recruitment_category_id').value;
     if (parentId != ""){
-      console.log(parentId)
       $.ajax({
         url: 'get_category_children',
         type: 'GET',
         data: { parent_id: parentId },
         dataType: 'json'
+        // cache: false,
       })
+
       .done(function(children){
         $('#children_wrapper').remove();
         $('#grandchildren_wrapper').remove();
@@ -60,6 +61,7 @@ window.addEventListener('DOMContentLoaded', function(){
         type: 'GET',
         data: { child_id: childId },
         dataType: 'json'
+        // cache: false,
       })
       .done(function(grandchildren){
         $('#grandchildren_wrapper').remove();

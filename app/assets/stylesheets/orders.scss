@@ -1,0 +1,69 @@
+// Place all the styles related to the orders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.transaction-contents {
+  background-color: #192437;
+  color: #ffffff;
+}
+
+.transaction-main {
+  width: 70%;
+  margin: auto;
+}
+
+.transaction-title-text-box {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.transaction-title-text {
+  font-size: 7vmin;
+}
+
+.buy-item-info {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contents-image {
+  display: flex;
+}
+
+.content-image {
+  display: block;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+}
+
+.item-payment-price {
+  font-size: 3vmax;
+}
+
+.form-group {
+  text-align: start;
+}
+
+.form-text-wrap {
+  
+}
+
+
+
+
+
+
+
+
+
+
+// 購入ボタン
+
+.sell-contents {
+  width: 50%;
+  margin: auto;
+}
+

@@ -57,7 +57,7 @@
       </div>
       <% elsif user_signed_in?  %>
       <div class="recruitment-show-btn">
-        <%= link_to "購入画面に進む", '#' ,class:"recruitment-btn-font aaa"%>
+        <%= link_to "購入画面に進む", recruitment_orders_path(@recruitment.id) ,class:"recruitment-btn-font aaa"%>
       </div>
       <% end %>
     </div>
