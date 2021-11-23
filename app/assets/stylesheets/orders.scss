@@ -24,7 +24,6 @@
 .buy-item-info {
   text-align: center;
   display: flex;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -48,13 +47,35 @@
 }
 
 .form-text-wrap {
-  
+  margin-top: 20px;
 }
 
+.form-text {
+  font-size: 3vmin;
+}
 
+.card-logo {
+  width: 40px;
+  margin: 5px 5px;
+}
 
+.input-expiration-date-wrap {
+  display: flex;
+  align-items: flex-end;
+}
 
-
+.input-expiration-date {
+  width: 20%;
+  margin-top: 5px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+  line-height: 45px;
+  text-align: center;
+}
 
 
 
