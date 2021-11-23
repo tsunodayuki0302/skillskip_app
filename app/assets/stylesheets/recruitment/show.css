@@ -26,8 +26,19 @@
 
 .status {
   position: absolute;
-  right: 20px;
+  right: 110px;
   background-color: chartreuse;
+  font-size: 40px;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: auto;
+  margin: 8px;
+}
+
+.top-page {
+  position: absolute;
+  right: 20px;
+  background-color: #aaa;
   font-size: 40px;
   border: 2px solid #000000;
   border-radius: 8px;
@@ -164,6 +175,14 @@
 }
 
 .aaa:hover {
+  color: #ffffff;
+}
+
+.aaaa{
+  color: white;
+}
+
+.aaaa:hover {
   color: #ffffff;
 }
 
