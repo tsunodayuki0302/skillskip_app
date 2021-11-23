@@ -1,7 +1,7 @@
 <div class="recruitment-sell-contents">
-  <h3 class="recruitments-sell-title">新規生徒募集</h3>
+  <h3 class="recruitments-sell-title">編集</h3>
   <div class="recruitment-sell-main">
-  <%= form_with model: @recruitment, url: recruitments_path, local: true do |f| %>
+  <%= form_with model: @recruitment, local: true do |f| %>
     <%# 画像 %>
     <div class="img-upload">
       <div class="weight-bold-text">
@@ -69,7 +69,7 @@
       </div>
     <div class="sell-btn-contents">
       <%= f.submit "募集する", class:"sell-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
+      <%=link_to 'もどる', recruitment_path, class:"back-btn" %>
     </div>
     <% end %>
   </div>
