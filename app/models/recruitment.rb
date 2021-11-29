@@ -1,5 +1,5 @@
 class Recruitment < ApplicationRecord
-
+  has_one :record
   belongs_to :user
   has_one_attached :image
 

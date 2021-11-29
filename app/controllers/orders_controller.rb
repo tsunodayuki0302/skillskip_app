@@ -24,7 +24,7 @@ class OrdersController < ApplicationController
   end
 
   def order_params
-    params.require(:order).permit( :telephone_number).merge(user_id: current_user.id,recruitment_id: params[:recruitment_id], token: params[:token])
+    params.require(:order).permit( :telephone_number).merge(user_id: current_user.id, recruitment_id: params[:recruitment_id], token: params[:token])
   end
 
   def pay_recruitment
