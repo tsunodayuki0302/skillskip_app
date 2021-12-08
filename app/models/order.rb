@@ -1,6 +1,6 @@
-class Order < ApplicationRecord
+class Order 
   include ActiveModel::Model
-  attr_accessor :telephone_number, :user_id, :item_id, :token
+  attr_accessor :telephone_number, :user_id, :recruitment_id, :token
 
   with_options presence: true do
     validates :token
